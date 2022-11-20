@@ -1,0 +1,3 @@
+<?php $this->layout("layouts/home/home_layout", ["title" => APPNAME]) ?>
+<?php $this->start("page") ?>
+<?php $this->stop() ?>

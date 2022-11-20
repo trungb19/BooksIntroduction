@@ -27,7 +27,7 @@ $router->post('/user/signup', '\App\Controllers\Auth\RegisterController@signUp')
 //Cấu hình route admin manager
 $router->post('/admin/adduser', '\App\Controllers\AdminController@addUser');
 $router->post('/admin/delete/(\d+)', '\App\Controllers\AdminController@deleteUser');
-$router->post('/admin/edituser/(\d+)', '\App\Controllers\AdminController@updateUser');
+$router->get('/admin/edituser/(\d+)', '\App\Controllers\AdminController@showPage');
 
 //Cấu hình route đăng xuất
 $router->get('/user/logout', '\App\Controllers\Auth\LoginController@logout');

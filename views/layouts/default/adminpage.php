@@ -44,9 +44,9 @@
                     <td><?=$this->e($account->UserName)?></td>
                     <td><?=$this->e($account->Permission)?></td>
                     <td>
-                    <a data-toggle="modal" data-target="#editModal" class="btn btn-xs btn-warning"  
-                    id="edit-user">
-                        <i alt="Edit" class="fa fa-pencil"> Edit</i></a>
+                        <a href="/admin/edituser/<?=$this->e($account->AccountId)?>" 
+                                class="btn btn-xs btn-warning">
+                                <i alt="Edit" class="fa fa-pencil"> Edit</i></a>
                     <form class="delete" action="/admin/delete/<?=$account->AccountId?>" method="POST" style="display: inline;">
                         <button type="submit" class="btn btn-xs btn-danger" name="delete-user">
                              <i alt="Delete" class="fa fa-trash"> Delete</i>

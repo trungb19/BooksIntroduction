@@ -47,6 +47,10 @@ class AdminController extends Controller {
               // redirect('/admin');
               }
               }
+       public function showPage(){
+              $this->sendPage('layouts/default/editpage');	
+              
+       }
        //hàm update user
                public function updateUser($AccountId){
                      $data_ID = $AccountId;
