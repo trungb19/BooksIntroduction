@@ -101,7 +101,7 @@ class Request {
 									data: { bookID:\''.$id.'\' ,
 											booktitle: \''.$booktitle.'\'},
 									success:function(data){
-										alert(\'Thêm thành công!\');
+										alert(\'Added to favorites!\');
 									}
 								  })">
 								<div id="demo" class="btn btn-success">Like</div></button>
