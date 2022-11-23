@@ -20,7 +20,7 @@
                 <p id="logout">Log out</p>
             <?php }else if(isset($_SESSION['user'])&&$_SESSION['permission']=="user")  { ?>
                 <p><a style="" href="/profile"><?php echo $_SESSION['name']?></a></p>
-                <p data-toggle="modal" data-target="#signUpModal">Log out</p>
+                <p id="logout">Log out</p>
             <?php }else { ?>
                 <p data-toggle="modal" data-target="#myModal">Sign in</p>
                 <p data-toggle="modal" data-target="#signUpModal">Sign up</p>
