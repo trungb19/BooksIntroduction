@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 23, 2022 lúc 04:27 AM
+-- Thời gian đã tạo: Th10 23, 2022 lúc 09:21 AM
 -- Phiên bản máy phục vụ: 10.4.25-MariaDB
 -- Phiên bản PHP: 8.1.10
 
@@ -41,10 +41,9 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`AccountId`, `UserID`, `UserEmail`, `UserPass`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Hao@gmail.com', '$2y$10$N97Q1lUAoHVro8ImpiVmhOkYXUbEP0.BPdU3BUG460ztRV98Yfr8e', '2022-11-15 09:26:53', '2022-11-15 09:26:53'),
-(2, 2, 'Trung@gmail.com', '$2y$10$mAE3BVB.JpPTtisoRl2Ayu9oaq4v8dtecxw4hmKGvnZctwowXDeH6', '2022-11-15 09:27:19', '2022-11-15 09:27:19'),
-(5, 5, 'admin@gmail.com', '$2y$10$iTDr5l.EL7LI3byUW5DQ8e.YoxiON2c7xsgoFAyvMv4BiQizR7XtG', '2022-11-20 09:14:52', '2022-11-20 09:14:52'),
-(6, 6, 'Trung31102022@gmail.com', '$2y$10$wjfEeyKywus6dXJXCZxKxu1aXjJ5XmjPF3KhK6mQWWGMs3XAvyzPK', '2022-11-21 13:33:27', '2022-11-21 13:33:27');
+(1, 1, 'admin@gmail.com', '$2y$10$8fUDF1XN8inUtVZjXZXmdetWEybIsng92cB2kNdtYRid/tJvyq3py', '2022-11-23 09:16:38', '2022-11-23 09:16:38'),
+(2, 2, 'trung@gmail.com', '$2y$10$gBNJGM8G8zpeCus3IrXCL.pIro4/MYqQRoAwCqugRMspcX3Tie7ri', '2022-11-23 09:16:54', '2022-11-23 09:16:54'),
+(3, 3, 'hao@gmail.com', '$2y$10$GqDuh/ZAmUz8LFeXA3q0te5MIFTRV1EYHAIFe7BCnTBqll4viXyKC', '2022-11-23 09:17:09', '2022-11-23 09:17:09');
 
 -- --------------------------------------------------------
 
@@ -59,14 +58,6 @@ CREATE TABLE `bookmark` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Đang đổ dữ liệu cho bảng `bookmark`
---
-
-INSERT INTO `bookmark` (`BookmarkID`, `UserID`, `BookFavorite`, `created_at`, `updated_at`) VALUES
-('NqBiCgAAQBAJ', 2, 'Blockchain Revolution', '2022-11-23 03:00:04', '2022-11-23 03:00:04'),
-('X8oXDAAAQBAJ', 2, 'The Business Blockchain', '2022-11-23 04:25:03', '2022-11-23 04:25:03');
 
 -- --------------------------------------------------------
 
@@ -87,10 +78,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`UserID`, `UserName`, `Permission`, `created_at`, `updated_at`) VALUES
-(1, 'Pham Nhat Hao', 'user', '2022-11-15 09:26:53', '2022-11-21 03:38:44'),
-(2, 'Dang Thanh Trung', 'user', '2022-11-15 09:27:19', '2022-11-15 09:27:19'),
-(5, 'admin', 'admin', '2022-11-20 09:14:52', '2022-11-20 09:14:52'),
-(6, 'Trung31102022', 'user', '2022-11-21 13:33:27', '2022-11-21 13:33:27');
+(1, 'Admin', 'admin', '2022-11-23 09:16:38', '2022-11-23 09:16:38'),
+(2, 'Trung', 'user', '2022-11-23 09:16:54', '2022-11-23 09:16:54'),
+(3, 'Phạm Nhật Hào', 'user', '2022-11-23 09:17:09', '2022-11-23 09:17:09');
 
 --
 -- Chỉ mục cho các bảng đã đổ
