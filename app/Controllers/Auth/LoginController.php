@@ -20,6 +20,7 @@ class LoginController extends Controller {
                 if (password_verify($_POST['pwd'], $has_pwd)) {
                     echo "Đúng mật khẩu!";
                     $_SESSION['user'] = $info->UserID;
+                    $_SESSION['email'] = $info->UserEmail;
                     $_SESSION['name'] = $info_user->UserName;
                     if($info_user->Permission == 'admin')
                     redirect("/admin");

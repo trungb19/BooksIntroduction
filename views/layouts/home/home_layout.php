@@ -29,8 +29,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="/css/animate.css" rel="stylesheet">
 
-    
-
+    <script src="/js/jquery-2.0.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//www.google.com/jsapi"></script>
 
 </head>
 
@@ -74,14 +74,14 @@
                         </div>
                         <div class="form-group">
                             <label for="">Email:</label>
-                            <input id="email" type="text" name="mail" value="" class="form-control"
-                                placeholder="Enter email:...">
+                            <input id="email" type="email" name="mail" value="" class="form-control"
+                                placeholder="Enter email:..." required>
                         </div>
 
                         <div class="form-group">
                             <label for="">Password:</label>
                             <input id="pass" type="password" name="pwd" value="" class="form-control"
-                                placeholder="Enter password:...">
+                                placeholder="Enter password:..." required>
                         </div>
                         <div class="form-group">
                             <button type="submit" id="login" name="button" class="btn btn-primary btn-block">Log
@@ -128,18 +128,18 @@
                         <div class="form-group">
                             <label for="">Name:</label>
                             <input id="name" type="text" name="name" value="" class="form-control"
-                                placeholder="Enter name:...">
+                                placeholder="Enter name:..." required>
                         </div>
                         <div class="form-group">
                             <label for="">Email:</label>
-                            <input id="email" type="text" name="mail" value="" class="form-control"
-                                placeholder="Enter email:...">
+                            <input id="email" type="email" name="mail" value="" class="form-control"
+                                placeholder="Enter email:..." required>
                         </div>
 
                         <div class="form-group">
                             <label for="">Password:</label>
                             <input id="pass" type="password" name="pwd" value="" class="form-control"
-                                placeholder="Enter password:...">
+                                placeholder="Enter password:..." required>
                         </div>
                         <div class="form-group">
                             <button type="submit" id="login" name="button" class="btn btn-primary btn-block">Sign up

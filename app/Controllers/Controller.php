@@ -16,7 +16,10 @@ class Controller
 		exit($this->view->render($page, $data));
 	}
 
-
+	public function sendNotFound(){
+	http_response_code(404);
+	exit($this->view->render('errors/404'));
+	}
 	//Lưu giá trị của form
 	protected function saveFormValues(array $data, array $except = []) {
 		$form = [];

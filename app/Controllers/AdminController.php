@@ -26,11 +26,11 @@ class AdminController extends Controller {
               $data['AccountID'] = $AccountId;
               $data['Permission'] = $_POST['permission'];
               $rs->createUser($data);
-                     if ($user->getLastUserID() == $UserID){ //kiểm tra lưu thành công chưa.
-                            
-              
-                            redirect('/admin');
-                            }
+              if ($user->getLastUserID() == $UserID){ //kiểm tra lưu thành công chưa.
+                     echo ' <div style="color:green;text-align:center;><p">Added user successfully</p>
+                            <button><a style="text-decoration: none;" href="/admin">Back</a></button></div>';       
+              // redirect('/admin'); }
+              }
               }
        //hàm delete user
               public function deleteUser($AccountId)
@@ -43,18 +43,40 @@ class AdminController extends Controller {
               else{
               Account::where('AccountId', $data_ID)->delete();
               User::where('UserID', $data_ID)->delete();
-              echo "<script>alert('delete successfully');</script>";
-              // redirect('/admin');
+              echo ' <div style="color:green;text-align:center;><p">Delete user successfully</p>
+                            <button><a style="text-decoration: none;" href="/admin">Back</a></button></div>';  
               }
               }
-       public function showPage(){
-              $this->sendPage('layouts/default/editpage');	
-              
-       }
+
+       //Hàm show user cần edit
+              public function showEditPage(){
+                     $this->sendPage('layouts/default/edit', );	
+                     
+              }
        //hàm update user
-               public function updateUser($AccountId){
-                     $data_ID = $AccountId;
-                     $Account = Account::where('AccountId', $data_ID)->first();
-                     echo $Account;
+               public function updateUser(){
+                     $data = array();
+                     $data['UserName'] = $_POST['name'];
+                     $data['UserEmail'] = $_POST['mail'];
+                     $data['Permission'] = $_POST['permission'];
+                     // kiểm tra mật khẩu có thay đổi không
+                     if($_POST['pwd']!='')
+                     $data['UserPass']=password_hash($_POST['pwd'], PASSWORD_DEFAULT);
+                     else
+                     {$rs=Account::where('AccountId',$_POST['id'])->first();
+                      $data['UserPass']=$rs->UserPass;    
+                     }
+                     //update
+                     Account::where('AccountId',$_POST['id'])->update([
+                            'UserEmail'=>$data['UserEmail'],
+                            'UserPass'=>$data['UserPass'],
+                     ]);
+                     User::where('UserID',$_POST['id'])->update([
+                            'UserName'=>$data['UserName'],
+                            'Permission'=>$data['Permission'],
+                     ]);
+                     echo ' <div style="color:green;text-align:center;><p">User update successful</p>
+                            <button><a style="text-decoration: none;" href="/admin">Back</a></button></div>';   
+
               }
 }

@@ -57,6 +57,11 @@ body {
 	background-color:rgba(221,221,221,0.63);
 }
 
+/*Tạo bìa 2 bên*/
+.margin {
+    background-color: whitesmoke;
+}
+
 .loader {
 	width:100%;
 	height:100%;
@@ -78,10 +83,6 @@ body {
 .modal {
 	height:95%!important;
 	top:0!important;
-}
-
-.pagination{
-	display: none;
 }
 
 .modal-body {
@@ -221,6 +222,10 @@ ul {
     height: 10em; 
     padding: 10px; 
     font-size: 20px;
+}
+
+li {
+    display: inline-block;
 }
 
 .header-search {

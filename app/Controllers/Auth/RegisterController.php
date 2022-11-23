@@ -54,9 +54,8 @@ class RegisterController extends Controller
 		$data['Permission'] = $Per;
 		$this->createUser($data);
 			if ($user->getLastUserID() == $UserID){ //kiểm tra lưu thành công chưa.
-				
-		
-				redirect('/');	
+			echo '<div style="color:green;text-align:center;><p">Sign Up Success</p>
+                 <button><a style="text-decoration: none;" href="/">Home</a></button></div>';       
 			}
 	}
 }
