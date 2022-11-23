@@ -26,7 +26,6 @@ class Request {
 			//Trường truy vấn rỗng => yêu cầu người dùng nhập gì đó
 			if($query=='') {
 				$query = 'Blockchain';
-				// throw new Exception("<h3><center>Error : Please Enter Something</center></h3>");
 			}
 
 
@@ -48,10 +47,9 @@ class Request {
 		}
 
 		foreach($data->items as $item) {
-				//$booktitle = $item->volumeInfo->title;
+
 				$booktitle = (isset($item->volumeInfo->title) ? $item->volumeInfo->title : false);
 
-				//$description = (isset($item->volumeInfo->description) ? $item->volumeInfo->description : false);
 				if(!empty($item->volumeInfo->description)) {
 					$description =implode(' ', array_slice(explode(' ', $item->volumeInfo->description), 0, 130)).'... ';
 				}else {
@@ -84,7 +82,6 @@ class Request {
 					}
 				}
 
-				//For XSS prevention
 				$isbnVal=htmlspecialchars($isbnVal, ENT_QUOTES, 'UTF-8');
 				$publish_date=htmlspecialchars($publish_date, ENT_QUOTES, 'UTF-8');
 				$pages=htmlspecialchars($pages, ENT_QUOTES, 'UTF-8');
