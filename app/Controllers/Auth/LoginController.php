@@ -4,8 +4,7 @@ namespace App\Controllers\Auth;
 use App\Models\Account;
 use App\Models\User;
 use App\Controllers\Controller;
-use Illuminate\Database\Capsule\Manager as DB;
-use App\SessionGuard as Guard; 
+
 
 class LoginController extends Controller {
 
@@ -13,13 +12,14 @@ class LoginController extends Controller {
     public function login() {
         if (isset($_POST['mail']) && isset($_POST['pwd'])) {
             $info = Account::where('UserEmail', $_POST['mail'])->first();
+            if ($info) {
             $info_user = User::where('UserID', $info->UserID)->first();
             $has_pwd = $info->UserPass;
-            if ($info) {
-                echo "Mật khẩu không đúng";
+            echo ' <div style="color:red;text-align:center;><p">Incorrect password</p>
+                <button><a style="text-decoration: none;" href="/">Home</a></button></div>';  
                 if (password_verify($_POST['pwd'], $has_pwd)) {
-                    echo "Đúng mật khẩu!";
                     $_SESSION['user'] = $info->UserID;
+                    $_SESSION['permission'] = $info_user->Permission;
                     $_SESSION['email'] = $info->UserEmail;
                     $_SESSION['name'] = $info_user->UserName;
                     if($info_user->Permission == 'admin')
@@ -27,6 +27,11 @@ class LoginController extends Controller {
                     else
                     redirect("/");
                 }
+            }
+            else {
+                echo ' <div style="color:red;text-align:center;><p">Account does not exist</p>
+                <button><a style="text-decoration: none;" href="/">Home</a></button></div>';  
+                //redirect("/");
             }
         }
 
@@ -41,4 +46,5 @@ class LoginController extends Controller {
 		redirect('/');
 	}
 }
+
 

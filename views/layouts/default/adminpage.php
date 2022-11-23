@@ -27,10 +27,21 @@
 
 </head>
 <body>
+<section class="pt-5 pb-5 bg-dark inner-header">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h1 class="mt-0 mb-3 text-white">Account Management</h1>
+			<div class="breadcrumbs">
+				<p class="mb-0 text-white"><a class="text-white" href="/">Home</a>  /  <span class="text-success">Users</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+</section>   
 <div class="container">
     <section id="inner" class="inner-section section">
             <!-- SECTION HEADING -->
-            <h2 class="section-heading text-center wow fadeIn" data-wow-duration="1s">Account Management</h2>
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <p class="wow fadeIn" data-wow-duration="2s">View your all Users here.</p>

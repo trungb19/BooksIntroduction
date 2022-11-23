@@ -16,7 +16,7 @@ Class Search extends Controller {
                 'UserID' => $_SESSION['user'] ,
                 'BookFavorite' => $_POST['booktitle']
             ]);
-            echo "Hello";
+           
         }
     }
 
@@ -24,4 +24,5 @@ Class Search extends Controller {
         Bookmark::where('BookmarkID', $_POST['BookmarkID'])->delete();
         $this->sendPage('layouts/default/default');
     }
+
 }

@@ -58,7 +58,7 @@
                 <!-- Modal header -->
                 <div class="modal-header text-center d-block">
                     <button type="button" name="button" class="close" data-dismiss="modal"
-                        style="position: absolute; right: 10px;">&times;</button>
+                        style="position: absolute; right: 10px;" onclick="location.reload();">&times;</button>
                     <!-- <h2 class="modal-title"> <i class="fa fa-lock"></i> Log in </h2> -->
                     <h3 style="font-family: monospace;">Book Introduction</h3>
                     <h5>Log in</h5>
@@ -75,13 +75,13 @@
                         <div class="form-group">
                             <label for="">Email:</label>
                             <input id="email" type="email" name="mail" value="" class="form-control"
-                                placeholder="Enter email:..." required>
+                                placeholder="Enter email..." required>
                         </div>
 
                         <div class="form-group">
                             <label for="">Password:</label>
                             <input id="pass" type="password" name="pwd" value="" class="form-control"
-                                placeholder="Enter password:..." required>
+                                placeholder="Enter password..." required>
                         </div>
                         <div class="form-group">
                             <button type="submit" id="login" name="button" class="btn btn-primary btn-block">Log
@@ -90,7 +90,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-danger mr-auto" data-dismiss="modal">
+                    <button class="btn btn-danger mr-auto" data-dismiss="modal" onclick="location.reload();">
                         <i class="fa fa-times"> Cancel</i>
                     </button>
                     <div class="text-right">
@@ -111,7 +111,7 @@
                 <!-- Modal header -->
                 <div class="modal-header text-center d-block">
                     <button type="button" name="button" class="close" data-dismiss="modal"
-                        style="position: absolute; right: 10px;">&times;</button>
+                        style="position: absolute; right: 10px;" onclick="location.reload();">&times;</button>
                     <!-- <h2 class="modal-title"> <i class="fa fa-lock"></i> Log in </h2> -->
                     <h3 style="font-family: monospace;">Book Introduction</h3>
                     <h5>Sign up</h5>
@@ -128,18 +128,18 @@
                         <div class="form-group">
                             <label for="">Name:</label>
                             <input id="name" type="text" name="name" value="" class="form-control"
-                                placeholder="Enter name:..." required>
+                                placeholder="Enter name..." required>
                         </div>
                         <div class="form-group">
                             <label for="">Email:</label>
                             <input id="email" type="email" name="mail" value="" class="form-control"
-                                placeholder="Enter email:..." required>
+                                placeholder="Enter email..." required>
                         </div>
 
                         <div class="form-group">
                             <label for="">Password:</label>
                             <input id="pass" type="password" name="pwd" value="" class="form-control"
-                                placeholder="Enter password:..." required>
+                                placeholder="Enter password..." required>
                         </div>
                         <div class="form-group">
                             <button type="submit" id="login" name="button" class="btn btn-primary btn-block">Sign up
@@ -148,7 +148,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-danger btn-block" data-dismiss="modal">
+                    <button class="btn btn-danger btn-block" data-dismiss="modal" onclick="location.reload();">
                         <i class="fa fa-times"> Cancel</i>
                     </button>
                     </div>

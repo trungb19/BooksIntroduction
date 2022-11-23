@@ -2,11 +2,21 @@
 namespace App\Controllers;
 use App\Models\User;
 use App\Models\Account;
+use App\Models\Bookmark;
 use App\Controllers\Auth\RegisterController;
+
 
 class AdminController extends Controller {
        public function index() {
-		$this->sendPage('layouts/default/adminpage');	
+              if (!isset($_SESSION['permission'])) {
+                     $this->sendPage('errors/404');
+              }
+              else if ($_SESSION['permission']=='admin') {
+                     $this->sendPage('layouts/default/adminpage');	
+              } else {
+                     $this->sendPage('errors/404');
+              }
+		
        }
        //hàm add user
               public function addUser(){
@@ -41,6 +51,7 @@ class AdminController extends Controller {
               echo'Lỗi AccountID';
               }
               else{
+              Bookmark::where('UserID', $data_ID)->delete();
               Account::where('AccountId', $data_ID)->delete();
               User::where('UserID', $data_ID)->delete();
               echo ' <div style="color:green;text-align:center;><p">Delete user successfully</p>

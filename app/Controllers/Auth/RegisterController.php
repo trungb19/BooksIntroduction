@@ -5,8 +5,7 @@ namespace App\Controllers\Auth;
 use App\Models\User;
 use App\Models\Account;
 use App\Controllers\Controller;
-use App\SessionGuard as Guard;
-use Illuminate\Database\Capsule\Manager as DB;
+
 
 
 class RegisterController extends Controller

@@ -1,6 +1,5 @@
 // document.getElementById('submit').onclick = function() {
 	document.getElementById('submit').onclick = function() {
-		confirm("Hello");
 		getData();
 	};
 	$("input").keypress(function(event) {

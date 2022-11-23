@@ -2,7 +2,6 @@
 
 <?php $this->start("page"); ?>
 <?php 
-  use Illuminate\Database\Capsule\Manager as DB;
-
-  $dt = DB::table('user')->where('UserID', $_SESSION['user'])->first();
+  use App\Models\User;
+  $dt = User::where('UserID', $_SESSION['user'])->first();
 ?>
